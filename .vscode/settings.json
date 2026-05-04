@@ -1,0 +1,16 @@
+{
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.patterns": {
+    "tsconfig.json": "tsconfig.*.json",
+    "turbo.json": "pnpm-workspace.yaml, .changeset",
+    "package.json": "pnpm-lock.yaml, .eslint*, eslint*, .prettier*, prettier*, .editorconfig",
+    "*.ts": "${capture}.test.ts"
+  },
+  "editor.rulers": [80, 100, 120],
+  "cSpell.enabled": false
+}
