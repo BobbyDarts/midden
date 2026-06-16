@@ -1,0 +1,28 @@
+{
+  "name": "@midden/prettier-config",
+  "version": "0.1.0",
+  "description": "Shared Prettier configuration for Midden projects",
+  "type": "module",
+  "exports": {
+    ".": "./index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "prettier",
+    "config",
+    "midden"
+  ],
+  "author": "Robert Garrison",
+  "license": "MIT",
+  "devDependencies": {
+    "typescript-eslint": "^8.59.1"
+  },
+  "peerDependencies": {
+    "prettier": ">=3.0.0"
+  }
+}

@@ -51,6 +51,16 @@ importers:
         specifier: ^8.59.1
         version: 8.59.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3)
 
+  packages/prettier-config:
+    dependencies:
+      prettier:
+        specifier: '>=3.0.0'
+        version: 3.8.3
+    devDependencies:
+      typescript-eslint:
+        specifier: ^8.59.1
+        version: 8.59.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3)
+
   packages/stamp:
     dependencies:
       '@js-temporal/polyfill':
