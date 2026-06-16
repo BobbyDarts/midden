@@ -21,7 +21,8 @@
     "prepublishOnly": "pnpm run build"
   },
   "exports": {
-    ".": "./dist/index.js"
+    ".": "./dist/index.js",
+    "./core": "./dist/core.js"
   },
   "publishConfig": {
     "access": "public"
