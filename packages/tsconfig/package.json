@@ -1,0 +1,30 @@
+{
+  "name": "@midden/tsconfig",
+  "version": "0.1.0",
+  "description": "Shared TypeScript configurations for Midden projects",
+  "type": "module",
+  "exports": {
+    "./base": "./base.json",
+    "./app": "./app.json",
+    "./node": "./node.json"
+  },
+  "files": [
+    "base.json",
+    "app.json",
+    "node.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "tsconfig",
+    "typescript",
+    "config",
+    "midden"
+  ],
+  "author": "Rob",
+  "license": "MIT",
+  "peerDependencies": {
+    "typescript": ">=6.0.0"
+  }
+}
