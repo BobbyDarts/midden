@@ -1,0 +1,12 @@
+{
+  "plugins": ["eslint", "typescript", "unicorn", "oxc", "vue", "vitest"],
+  "env": {
+    "browser": true
+  },
+  "categories": {
+    "correctness": "error"
+  },
+  "rules": {
+    "vitest/require-mock-type-parameters": "off"
+  }
+}
