@@ -1,0 +1,48 @@
+{
+  "name": "@midden/eslint-config-vue",
+  "version": "0.1.0",
+  "description": "Shared Vue ESLint configuration for Midden projects",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "format": "prettier --write . --ignore-path ../../.prettierignore",
+    "format:check": "prettier --check . --ignore-path ../../.prettierignore",
+    "typecheck": "tsc --noEmit -p tsconfig.typecheck.json",
+    "validate": "pnpm run lint && pnpm run format:check && pnpm run typecheck",
+    "prepublishOnly": "pnpm run build"
+  },
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "dependencies": {
+    "@midden/eslint-config": "^0.2.0"
+  },
+  "peerDependencies": {
+    "@vue/eslint-config-typescript": ">=14.0.0",
+    "eslint": ">=10.0.0",
+    "eslint-config-prettier": ">=10.0.0",
+    "eslint-plugin-import-x": ">=4.0.0",
+    "eslint-plugin-vue": ">=9.0.0",
+    "typescript-eslint": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^25.6.0",
+    "@vue/eslint-config-typescript": "^14.0.0",
+    "eslint-plugin-vue": "^9.0.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "typescript-eslint": "^8.59.1"
+  }
+}
