@@ -1,0 +1,25 @@
+{
+  "name": "@midden/oxlint-config",
+  "version": "0.1.0",
+  "description": "Shared oxlint configuration for Midden projects",
+  "type": "module",
+  "exports": {
+    ".": "./index.json"
+  },
+  "files": [
+    "index.json"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "keywords": [
+    "oxlint",
+    "config",
+    "midden"
+  ],
+  "author": "Rob",
+  "license": "MIT",
+  "peerDependencies": {
+    "oxlint": ">=0.16.0"
+  }
+}
