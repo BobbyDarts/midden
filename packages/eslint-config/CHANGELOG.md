@@ -1,5 +1,11 @@
 # @midden/eslint-config
 
+## 0.2.1
+
+### Patch Changes
+
+- c92c515: Add eslint-import-resolver-typescript to core config
+
 ## 0.2.0
 
 ### Minor Changes
