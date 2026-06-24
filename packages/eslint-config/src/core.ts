@@ -1,5 +1,6 @@
 // packages/eslint-config/src/core.ts
 
+import { createTypeScriptImportResolver } from "eslint-import-resolver-typescript";
 import importPlugin from "eslint-plugin-import-x";
 import globals from "globals";
 import tseslint from "typescript-eslint";
@@ -10,6 +11,14 @@ export default tseslint.config(
 
     plugins: {
       "import-x": importPlugin,
+    },
+
+    settings: {
+      "import-x/resolver-next": [
+        createTypeScriptImportResolver({
+          alwaysTryTypes: true,
+        }),
+      ],
     },
 
     rules: {
