@@ -27,7 +27,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@midden/eslint-config": "^0.2.0"
+    "@midden/eslint-config": "workspace:*"
   },
   "peerDependencies": {
     "@vue/eslint-config-typescript": ">=14.0.0",

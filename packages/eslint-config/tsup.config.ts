@@ -9,5 +9,11 @@ export default defineConfig({
   sourcemap: true,
   clean: true,
   target: "es2022",
-  external: ["eslint-import-resolver-typescript"],
+  external: [
+    "eslint-import-resolver-typescript",
+    "typescript-eslint",
+    "eslint-plugin-import-x",
+  ],
+  splitting: false,
+  treeshake: false,
 });

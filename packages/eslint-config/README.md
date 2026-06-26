@@ -4,8 +4,8 @@ Shared ESLint configuration for Midden projects.
 
 Provides two exports:
 
-- **Default** — full config for Node.js and non-Vue TypeScript projects
-- **`/core`** — rules only, no parser setup, for use in framework-specific configs like `@midden/eslint-config-vue`
+- **Default** — full ESLint configuration for Node.js and TypeScript projects.
+- **`coreConfig`** — rules only (no parser setup), intended for framework-specific packages such as `@midden/eslint-config-vue`.
 
 ## Installation
 
@@ -15,34 +15,56 @@ pnpm add -D @midden/eslint-config @eslint/js eslint eslint-config-prettier eslin
 
 ## Usage
 
-**`eslint.config.ts`**
+**eslint.config.ts**
 
 ```ts
 import middenConfig from "@midden/eslint-config";
-import tseslint from "typescript-eslint";
 
-export default tseslint.config(...middenConfig);
+export default middenConfig();
 ```
 
-With local overrides:
+### Custom Import Path Groups
+
+Projects can extend the default import ordering with additional path groups.
+
+```ts
+import middenConfig from "@midden/eslint-config";
+
+export default middenConfig({
+  pathGroups: [
+    {
+      pattern: "#/**",
+      group: "internal",
+    },
+  ],
+});
+```
+
+### Additional Local Overrides
+
+Since the config returns a flat config array, you can append additional configuration as usual.
 
 ```ts
 import middenConfig from "@midden/eslint-config";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(...middenConfig, {
-  rules: {
-    "@typescript-eslint/no-explicit-any": "error",
+export default tseslint.config(
+  ...middenConfig(),
+
+  {
+    rules: {
+      "@typescript-eslint/no-explicit-any": "error",
+    },
   },
-});
+);
 ```
 
 ## Core Export
 
-For framework-specific configs that handle their own parser setup:
+Framework-specific packages can reuse the shared rules without the parser configuration.
 
 ```ts
-import { coreConfig } from "@midden/eslint-config/core";
+import { coreConfig } from "@midden/eslint-config";
 ```
 
 ## Peer Dependencies

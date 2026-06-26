@@ -1,6 +1,8 @@
 # @midden/eslint-config-vue
 
-Shared Vue ESLint configuration for Midden projects. Extends `@midden/eslint-config/core` with Vue-specific rules and parser setup.
+Shared ESLint configuration for Vue projects.
+
+Builds on `@midden/eslint-config` by adding Vue parsing, Vue rules, and a default `@/**` import alias.
 
 ## Installation
 
@@ -10,35 +12,63 @@ pnpm add -D @midden/eslint-config-vue @midden/eslint-config @vue/eslint-config-t
 
 ## Usage
 
-**`eslint.config.ts`**
+**eslint.config.ts**
 
 ```ts
 import middenVueConfig from "@midden/eslint-config-vue";
-import tseslint from "typescript-eslint";
 
-export default tseslint.config(...middenVueConfig);
+export default middenVueConfig();
 ```
 
-With local overrides:
+### Custom Import Path Groups
+
+Vue projects automatically treat `@/**` as an internal import.
+
+Additional project-specific path groups can be supplied:
+
+```ts
+import middenVueConfig from "@midden/eslint-config-vue";
+
+export default middenVueConfig({
+  pathGroups: [
+    {
+      pattern: "@/components/ui/**",
+      group: "external",
+      position: "after",
+    },
+  ],
+});
+```
+
+The resulting import order will include both:
+
+- `@/components/ui/**`
+- `@/**`
+
+### Additional Local Overrides
 
 ```ts
 import middenVueConfig from "@midden/eslint-config-vue";
 import tseslint from "typescript-eslint";
 
-export default tseslint.config(...middenVueConfig, {
-  ignores: ["src/components/ui/**"],
-});
+export default tseslint.config(
+  ...middenVueConfig(),
+
+  {
+    ignores: ["src/components/ui/**"],
+  },
+);
 ```
 
 ## What's Included
 
-- All rules from `@midden/eslint-config/core`
-- Vue SFC parsing via `vue-eslint-parser`
-- `eslint-plugin-vue` flat/recommended rules
+- Everything from `@midden/eslint-config`
+- Vue Single File Component parsing
+- `eslint-plugin-vue` recommended flat configuration
 - `@vue/eslint-config-typescript` integration
-- Vue-specific rule overrides (`block-order`, `define-macros-order`, `no-undef-components`, etc.)
-- Import ordering with `@/**` path group support
-- Prettier integration via `eslint-config-prettier`
+- Vue-specific rule customizations
+- Automatic `@/**` import alias support
+- Prettier integration
 
 ## Peer Dependencies
 

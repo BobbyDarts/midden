@@ -6,8 +6,16 @@ import {
   vueTsConfigs,
 } from "@vue/eslint-config-typescript";
 import skipFormatting from "eslint-config-prettier/flat";
-import importPlugin from "eslint-plugin-import-x";
 import pluginVue from "eslint-plugin-vue";
+
+const core = coreConfig({
+  pathGroups: [
+    {
+      pattern: "@/**",
+      group: "internal",
+    },
+  ],
+});
 
 export default defineConfigWithVueTs(
   {
@@ -22,36 +30,7 @@ export default defineConfigWithVueTs(
   ...pluginVue.configs["flat/recommended"],
   vueTsConfigs.recommended,
 
-  // Core Midden rules (TypeScript, import ordering, etc.)
-  ...coreConfig,
-
-  // Import ordering with Vue path group support
-  {
-    plugins: {
-      "import-x": importPlugin,
-    },
-    rules: {
-      "import-x/order": [
-        "warn",
-        {
-          groups: [
-            ["builtin", "external"],
-            "internal",
-            ["parent", "sibling", "index"],
-          ],
-          pathGroups: [
-            {
-              pattern: "@/**",
-              group: "internal",
-            },
-          ],
-          pathGroupsExcludedImportTypes: ["builtin"],
-          "newlines-between": "always",
-          alphabetize: { order: "asc", caseInsensitive: true },
-        },
-      ],
-    },
-  },
+  ...core,
 
   // Vue-specific rules
   {
