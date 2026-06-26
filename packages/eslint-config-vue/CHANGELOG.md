@@ -1,5 +1,11 @@
 # @midden/eslint-config-vue
 
+## 0.2.1
+
+### Patch Changes
+
+- Export callable function instead of config array
+
 ## 0.2.0
 
 ### Minor Changes
