@@ -1,5 +1,11 @@
 # @midden/eslint-config
 
+## 0.3.0
+
+### Minor Changes
+
+- Convert to callable function with pathGroups option
+
 ## 0.2.1
 
 ### Patch Changes
