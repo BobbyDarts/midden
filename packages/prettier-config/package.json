@@ -1,13 +1,14 @@
 {
   "name": "@midden/prettier-config",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Shared Prettier configuration for Midden projects",
   "type": "module",
   "exports": {
     ".": "./index.js"
   },
   "files": [
-    "index.js"
+    "index.js",
+    "index.d.ts"
   ],
   "publishConfig": {
     "access": "public"

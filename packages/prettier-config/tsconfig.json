@@ -5,5 +5,5 @@
     "noEmit": true,
     "allowImportingTsExtensions": true
   },
-  "include": ["eslint.config.ts", "index.js"]
+  "include": ["eslint.config.ts", "index.js", "index.d.ts"]
 }
