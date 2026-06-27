@@ -1,5 +1,11 @@
 # @midden/eslint-config-vue
 
+## 0.2.2
+
+### Patch Changes
+
+- Fix pathGroups order so consumer patterns take precedence over @/\*\* catch-all
+
 ## 0.2.1
 
 ### Patch Changes

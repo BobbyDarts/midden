@@ -15,11 +15,11 @@ export default function middenVueConfig(
 ): ReturnType<typeof defineConfigWithVueTs> {
   const core = coreConfig({
     pathGroups: [
+      ...(options.pathGroups ?? []),
       {
         pattern: "@/**",
         group: "internal",
       },
-      ...(options.pathGroups ?? []),
     ],
   });
 
