@@ -1,9 +1,0 @@
-{
-  "extends": "../../tsconfig.base.json",
-  "compilerOptions": {
-    "allowJs": true,
-    "noEmit": true,
-    "allowImportingTsExtensions": true
-  },
-  "include": ["eslint.config.ts", "index.js", "index.d.ts"]
-}

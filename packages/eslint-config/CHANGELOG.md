@@ -1,5 +1,11 @@
 # @midden/eslint-config
 
+## 0.3.1
+
+### Patch Changes
+
+- Dependency hygiene across config packages
+
 ## 0.3.0
 
 ### Minor Changes

@@ -1,5 +1,11 @@
 # @midden/prettier-config
 
+## 0.1.3
+
+### Patch Changes
+
+- Dependency hygiene across config packages
+
 ## 0.1.2
 
 ### Patch Changes

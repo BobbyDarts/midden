@@ -1,6 +1,6 @@
 {
   "name": "@midden/eslint-config-vue",
-  "version": "0.2.2",
+  "version": "0.2.3",
   "description": "Shared Vue ESLint configuration for Midden projects",
   "license": "MIT",
   "type": "module",
@@ -27,7 +27,7 @@
     "access": "public"
   },
   "dependencies": {
-    "@midden/eslint-config": "workspace:*"
+    "@midden/eslint-config": "^0.3.1"
   },
   "peerDependencies": {
     "@vue/eslint-config-typescript": ">=14.0.0",
@@ -40,6 +40,8 @@
   "devDependencies": {
     "@types/node": "^25.6.0",
     "@vue/eslint-config-typescript": "^14.0.0",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-plugin-import-x": "^4.16.2",
     "eslint-plugin-vue": "^9.0.0",
     "tsup": "^8.5.1",
     "typescript": "^6.0.3",

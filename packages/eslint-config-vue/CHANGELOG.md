@@ -1,5 +1,13 @@
 # @midden/eslint-config-vue
 
+## 0.2.3
+
+### Patch Changes
+
+- Dependency hygiene across config packages
+- Updated dependencies
+  - @midden/eslint-config@0.3.1
+
 ## 0.2.2
 
 ### Patch Changes
