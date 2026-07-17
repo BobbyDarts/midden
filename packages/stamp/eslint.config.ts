@@ -1,6 +1,6 @@
 import tseslint from "typescript-eslint";
 
-import rootConfig from "../../eslint.config.ts";
+import rootConfig from "../../eslint.config";
 
 const tsconfigPath = "packages/stamp/tsconfig.eslint.json";
 

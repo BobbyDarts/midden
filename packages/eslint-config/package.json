@@ -1,6 +1,6 @@
 {
   "name": "@midden/eslint-config",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Shared ESLint configuration for Midden projects",
   "license": "MIT",
   "type": "module",

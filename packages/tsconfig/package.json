@@ -1,6 +1,6 @@
 {
   "name": "@midden/tsconfig",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Shared TypeScript configurations for Midden projects",
   "type": "module",
   "exports": {

@@ -1,6 +1,6 @@
 {
   "name": "@midden/stamp",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A lightweight Temporal-based time stamping utility for apps",
   "license": "MIT",
   "type": "module",

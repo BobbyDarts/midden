@@ -16,7 +16,7 @@ Core compiler options shared across all environments. Use as the foundation for 
 
 ### `@midden/tsconfig/app`
 
-Extends `base` with DOM lib, Vue-compatible settings, and `allowImportingTsExtensions`. For use in browser/Vue app source files.
+Extends `base` with DOM lib and Vue-compatible settings. For use in browser/Vue app source files.
 
 ### `@midden/tsconfig/node`
 

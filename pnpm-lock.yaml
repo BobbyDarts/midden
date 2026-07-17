@@ -88,8 +88,8 @@ importers:
   packages/eslint-config-vue:
     dependencies:
       '@midden/eslint-config':
-        specifier: ^0.3.0
-        version: 0.3.0(@eslint/js@10.0.1(eslint@10.3.0(jiti@2.6.1)))(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-prettier@5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1))(prettier@3.8.3))(eslint@10.3.0(jiti@2.6.1))(globals@17.6.0)(typescript-eslint@8.59.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))
+        specifier: ^0.3.1
+        version: 0.3.1(@eslint/js@10.0.1(eslint@10.3.0(jiti@2.6.1)))(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint-import-resolver-typescript@4.4.4(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-prettier@5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1))(prettier@3.8.3))(eslint@10.3.0(jiti@2.6.1))(globals@17.6.0)(typescript-eslint@8.59.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))
       eslint:
         specifier: '>=10.0.0'
         version: 10.3.0(jiti@2.6.1)
@@ -470,12 +470,13 @@ packages:
   '@manypkg/get-packages@1.1.3':
     resolution: {integrity: sha512-fo+QhuU3qE/2TQMQmbVMqaQ6EWbMhi4ABWP+O4AM1NqPBuy0OrApV5LO6BrrgnhtAHS2NH6RrVk9OL181tTi8A==}
 
-  '@midden/eslint-config@0.3.0':
-    resolution: {integrity: sha512-cPWV3XFE6KQQbm9v7IAojWn7vd0wuHt6moArsh3pyIs9NCUwCEdS5mYOVjhrleYmefAfjrKFLt4tzdpRp6pSJg==}
+  '@midden/eslint-config@0.3.1':
+    resolution: {integrity: sha512-wQMjed98JZQUzYkOQ3RQbaLfpO+18ZGuDtp54/dHt9FNk+op/PoPDjjG/S9CiIaPhTozXREm09f6n9mQ13LkCQ==}
     peerDependencies:
       '@eslint/js': '>=10.0.0'
       eslint: '>=10.0.0'
       eslint-config-prettier: '>=10.0.0'
+      eslint-import-resolver-typescript: '>=4.0.0'
       eslint-plugin-import-x: '>=4.0.0'
       eslint-plugin-prettier: '>=5.0.0'
       globals: '>=17.0.0'
@@ -2596,11 +2597,12 @@ snapshots:
       globby: 11.1.0
       read-yaml-file: 1.1.0
 
-  '@midden/eslint-config@0.3.0(@eslint/js@10.0.1(eslint@10.3.0(jiti@2.6.1)))(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-prettier@5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1))(prettier@3.8.3))(eslint@10.3.0(jiti@2.6.1))(globals@17.6.0)(typescript-eslint@8.59.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))':
+  '@midden/eslint-config@0.3.1(@eslint/js@10.0.1(eslint@10.3.0(jiti@2.6.1)))(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint-import-resolver-typescript@4.4.4(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint-plugin-prettier@5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1))(prettier@3.8.3))(eslint@10.3.0(jiti@2.6.1))(globals@17.6.0)(typescript-eslint@8.59.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))':
     dependencies:
       '@eslint/js': 10.0.1(eslint@10.3.0(jiti@2.6.1))
       eslint: 10.3.0(jiti@2.6.1)
       eslint-config-prettier: 10.1.8(eslint@10.3.0(jiti@2.6.1))
+      eslint-import-resolver-typescript: 4.4.4(eslint-plugin-import-x@4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1))
       eslint-plugin-import-x: 4.16.2(@typescript-eslint/utils@8.61.1(eslint@10.3.0(jiti@2.6.1))(typescript@6.0.3))(eslint@10.3.0(jiti@2.6.1))
       eslint-plugin-prettier: 5.5.5(eslint-config-prettier@10.1.8(eslint@10.3.0(jiti@2.6.1)))(eslint@10.3.0(jiti@2.6.1))(prettier@3.8.3)
       globals: 17.6.0

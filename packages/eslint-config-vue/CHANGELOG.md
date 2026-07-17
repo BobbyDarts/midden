@@ -1,5 +1,13 @@
 # @midden/eslint-config-vue
 
+## 0.2.4
+
+### Patch Changes
+
+- Remove unnecessary allowImportingTsExtensions from the app configuration
+- Updated dependencies
+  - @midden/eslint-config@0.3.2
+
 ## 0.2.3
 
 ### Patch Changes
